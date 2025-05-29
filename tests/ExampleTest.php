@@ -1,5 +1,11 @@
 <?php
 
-it('can test', function () {
-    expect(true)->toBeTrue();
-});
+use YacineDiaf\LaravelNotifyme\Tests\TestCase;
+
+class ExampleTest extends TestCase
+{
+    public function test_example()
+    {
+        $this->assertTrue(true);
+    }
+}

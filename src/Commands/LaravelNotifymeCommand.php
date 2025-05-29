@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace YacineDiaf\LaravelNotifyme\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelNotifymeCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-notifyme';
 
     public $description = 'My command';
 
