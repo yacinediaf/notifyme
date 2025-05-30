@@ -7,6 +7,8 @@
 
 This package allows you to notify your users through the firebase cloud messaging technique in order to notify them using there device notification on both IOS or ANDROID with ease.
 
+Before start working with this package it is recommended to read the following article to know how things works under the hood. [Notify me! Using Laravel and FCM.](https://medium.com/@yacine.superieut/notify-me-using-laravel-and-fcm-fd5d3caccaaa)
+
 ## Requirements
 
 You need to have laravel sanctum installed.
@@ -18,13 +20,13 @@ composer require laravel/sanctum
 
 ## Installation
 
-You can install the package via composer:
+1. You can install the package via composer:
 
 ```bash
 composer require yacinediaf/laravel-notifyme
 ```
 
-You can publish and run the migrations with:
+2. You can publish and run the migrations with:
 
 ```bash
 php artisan vendor:publish --tag="laravel-notifyme-migrations"
@@ -32,6 +34,13 @@ php artisan migrate
 ```
 
 > Don't forget to add the **hasDevice** trait to your User model
+
+3. Add the FIREBASE_CREDENTIALS to your **.env** file you can read the following article in order to know where to get this file.
+   [Notify me! Using Laravel and FCM.](https://medium.com/@yacine.superieut/notify-me-using-laravel-and-fcm-fd5d3caccaaa)
+
+```bash
+    FIREBASE_CREDENTIALS=storage/app/private/googleaccountservice.json
+```
 
 ## Usage
 
