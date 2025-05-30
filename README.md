@@ -38,7 +38,7 @@ php artisan migrate
 1. Make sure the current user is authenticated.
 2. Generate the FCM token on the client side from your mobile client (IOS, ADNROID) by installing firebase package compatible with the language you're using for example **Flutter**.
 3. Save the generated FCM token for the current user with the current device by **Posting** to this endpoint **/api/save_device_token**
-4. You need to include in the body parameter of the requestthe following data:
+4. You need to include in the body parameter of the request the following data:
 
 ```php
     [
