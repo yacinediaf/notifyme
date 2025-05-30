@@ -1,5 +1,7 @@
 <?php
 
+namespace YacineDiaf\LaravelNotifyme\Concerns;
+
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use YacineDiaf\LaravelNotifyme\Models\Device;
 
