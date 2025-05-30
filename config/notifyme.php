@@ -1,6 +1,5 @@
 <?php
 
-// config for YacineDiaf/LaravelNotifyme
 return [
-
+    'firebase_credentials' => env('FIREBASE_CREDENTIALS'),
 ];
