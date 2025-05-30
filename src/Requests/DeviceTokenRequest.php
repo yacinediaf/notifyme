@@ -3,7 +3,8 @@
 namespace YacineDiaf\LaravelNotifyme\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-//use Illuminate\Support\Str;
+
+// use Illuminate\Support\Str;
 
 class DeviceTokenRequest extends FormRequest
 {
@@ -12,14 +13,14 @@ class DeviceTokenRequest extends FormRequest
         return [
             'user_id' => ['required', 'exists:users,id'],
             'device_token' => ['required', 'string'],
-            'device_info' => ['required', 'string']
+            'device_info' => ['required', 'string'],
         ];
     }
 
     /**
      * If you want to include display the body parameter in the documentation, you can use the following method
      * in order to expose them and make them available discoverable especially if you're working
-     * with SCRIBE 
+     * with SCRIBE
      */
 
     // public function bodyParameters()

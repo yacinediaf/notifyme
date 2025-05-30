@@ -24,15 +24,17 @@ class DeviceController implements HasMiddleware
         $attributes = $request->validated();
         $deviceToken = $attributes['device_token'];
         $deviceInfo = $attributes['device_info'];
-        //Update device_token if the device already exists
+        // Update device_token if the device already exists
         if ($device = request()->user()->hasDevice($deviceInfo)) {
             $device->update([
                 'device_token' => $deviceToken,
             ]);
+
             return response()->json(['message' => 'Device information updated successfully.']);
         }
-        //Attach new device to user
+        // Attach new device to user
         $request->user()->attachDevice($attributes);
+
         return response()->json(['message' => 'Device information created successfully.']);
     }
 }

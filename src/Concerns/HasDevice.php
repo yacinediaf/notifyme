@@ -6,8 +6,8 @@ use YacineDiaf\LaravelNotifyme\Models\Device;
 trait HasDevice
 {
     /**
-    * Each user may have one or many device tokens
-    */
+     * Each user may have one or many device tokens
+     */
     public function devices(): HasMany
     {
         return $this->hasMany(Device::class);
@@ -30,7 +30,6 @@ trait HasDevice
      * Forget Device token this is not taken in
      * consideration user has many devices
      * it just delete them all
-     *
      */
     public function forgetDevice()
     {
@@ -39,17 +38,16 @@ trait HasDevice
 
     /**
      * Get the user device using its name
-     *
      */
     public function hasDevice($device)
     {
         return $this->devices()
-                    ->where('device_info', $device)
-                    ->first();
+            ->where('device_info', $device)
+            ->first();
     }
 
     public function routeNotificationForFcm()
     {
-        return $this->devices()->latest()->first()->device_token ;
+        return $this->devices()->latest()->first()->device_token;
     }
 }
