@@ -29,7 +29,7 @@ composer require yacinediaf/laravel-notifyme
 2. You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-notifyme-migrations"
+php artisan vendor:publish --tag="migrations"
 php artisan migrate
 ```
 
